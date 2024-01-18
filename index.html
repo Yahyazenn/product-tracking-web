@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Tracking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Product Tracking</h1>
+    <div id="error" style="color: red;"></div>
+    <form id="trackingForm">
+        <label for="code">Product Code:</label>
+        <input type="text" id="code" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <br>
+        <input type="button" value="Track" onclick="trackProduct()">
+    </form>
+
+    <div id="result" style="display: none;">
+        <h2>Product Tracking Result</h2>
+        <p><strong>Product Name:</strong> <span id="productName"></span></p>
+        <p><strong>Status:</strong> <span id="productStatus"></span></p>
+        <p><a href="#" onclick="resetForm()">Back to Tracking</a></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
